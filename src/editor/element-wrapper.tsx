@@ -32,7 +32,7 @@ export const ElementWrapper: React.FC<Props> = ({ element }) => {
     transition,
   } = useSortable({ id: element.id });
 
-  const { selected, selectElement, draggingElement, deleteElement } = useStoryCanvas();
+  const {  selectElement, draggingElement, deleteElement } = useStoryCanvas();
 
   const [hovered, setHovered] = useState(false);
 
@@ -42,7 +42,6 @@ export const ElementWrapper: React.FC<Props> = ({ element }) => {
     position: 'relative',
     transform: CSS.Transform.toString(transform),
     transition,
-    boxShadow: selected?.id === element.id ? "0 4px 8px rgba(0,0,0,0.1)" : undefined,
     opacity: isDragging ? 0 : 1,
   };
 
