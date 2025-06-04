@@ -6,6 +6,18 @@ import { useStoryCanvas } from "./context";
 import { ElementComponent } from "./element-component";
 import { Handles } from "./handles";
 import type { StoryElement } from "./types";
+import styled from "styled-components";
+
+const Overlay = styled.div({
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%',
+  zIndex: 10,
+  background: 'transparent',
+  pointerEvents: 'all',
+})
 
 interface Props {
   element: StoryElement;
@@ -54,6 +66,8 @@ export const ElementWrapper: React.FC<Props> = ({ element }) => {
       )}
 
       <ElementComponent element={element} />
+      
+      <Overlay />
     </div>
   );
 }

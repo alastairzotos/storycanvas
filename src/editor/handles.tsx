@@ -13,7 +13,7 @@ const Handle = styled.div({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  zIndex: 1,
+  zIndex: 100,
 })
 
 const DragHandle = styled(Handle)({
