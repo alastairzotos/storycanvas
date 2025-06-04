@@ -5,6 +5,7 @@ import { useStoryCanvas } from "./context";
 import { ElementComponent } from "./element-component";
 import { ElementWrapper } from "./element-wrapper";
 import styled from "styled-components";
+import { Handles } from "./handles";
 
 const OverlayWrapper = styled.div({
   cursor: 'grab',
@@ -45,6 +46,7 @@ export const StoryCanvasBody: React.FC = () => {
             ? (
               <OverlayWrapper>
                 <ElementComponent element={draggingElement} />
+                <Handles />
               </OverlayWrapper>
             )
             : null}
